@@ -126,7 +126,6 @@ public class DashboardActivity extends AppCompatActivity
                 FragmentTransaction ft = fm.beginTransaction();
                 ft.replace(R.id.frame_lMain, fragment).commit();
                 drawer.closeDrawers();
-
             }
         });
 
