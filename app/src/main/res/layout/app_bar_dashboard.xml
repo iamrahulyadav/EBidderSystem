@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activities.loginmodule.DashboardActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/toolbarcolor"
+            app:popupTheme="@style/AppTheme.PopupOverlay">
+
+
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/toolbarcolor"
+            android:orientation="vertical"
+            android:padding="@dimen/_8sdp">
+
+            <EditText
+                android:id="@+id/activity_team_search_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@drawable/corner_edittext"
+                android:drawableLeft="@drawable/srch_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:focusable="true"
+                android:hint="@string/search"
+                android:imeOptions="actionDone"
+                android:inputType="none"
+                android:padding="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:textColorHint="@color/gray_sold_by_text_clr"
+                android:textSize="@dimen/_12sdp" />
+
+        </LinearLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/frame_lMain">
+
+<!--
+    <include layout="@layout/content_dashboard" />
+-->
+
+    </FrameLayout>
+</LinearLayout>

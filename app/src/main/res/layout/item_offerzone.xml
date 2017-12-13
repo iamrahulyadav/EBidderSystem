@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_2sdp"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/setting_Account"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_4sdp"
+        card_view:cardUseCompatPadding="true">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/offerzone_productIv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_120sdp"
+                android:scaleType="fitXY"
+                android:src="@drawable/slider4" />
+
+            <TextView
+                android:id="@+id/offerzone_producttv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/offerzone_productIv"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="#424242"
+                android:padding="@dimen/_5sdp"
+                android:layout_margin="@dimen/_10sdp"
+                android:text="Winter Collection"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp"
+                android:textStyle="bold" />
+
+            <!-- <TextView
+                 android:id="@+id/catogry_productName"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_centerHorizontal="true"
+                 android:text="Kitchen and dining"
+                 android:textAllCaps="true"
+                 android:textSize="@dimen/_10sdp"
+                 android:textStyle="bold" />
+ -->
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+
+</LinearLayout>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#1B5E20</color>
+    <color name="colorAccent">#2E7D32</color>
+
+
+    <color name="toolbarcolor">#2E7D32</color>
+    <color name="white">#ffffff</color>
+    <color name="graylight">#939393</color>
+    <color name="bgcolor">#F4F6F6</color>
+    <color name="bg_nav">#ffffff</color>
+    <color name="bg_time">#8f8e8d</color>
+    <color name="bg_msg">#595651</color>
+    <color name="black">#000000</color>
+    <color name="bg_sendto">#6b6966</color>
+    <color name="gray_sold_by_bg">#ebebeb </color>
+    <color name="gray_sold_by_text_clr">#c2c2c2 </color>
+    <color name="lightpinkbackground">#f5f0f7</color>
+    <color name="lightbackground">#FAFAFA</color>
+
+
+
+
+</resources>

@@ -1,0 +1,553 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightpinkbackground"
+    android:orientation="vertical"
+    tools:context=".activities.loginmodule.DashboardActivity">
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_150sdp"
+                android:layout_marginBottom="8dp" />
+
+            <LinearLayout
+                android:id="@+id/SliderDots"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/viewPager"
+                android:gravity="center_vertical|center_horizontal"
+                android:orientation="horizontal" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Top deals for you"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/topDealsRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Browse By Category"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <!--  <HorizontalScrollView
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content">
+
+                  <LinearLayout xmlns:card_view="http://schemas.android.com/tools"
+                      android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:weightSum="1"
+                      android:orientation="horizontal">
+
+                      <android.support.v7.widget.CardView
+                          android:id="@+id/setting_Account"
+                          android:layout_width="match_parent"
+                          android:layout_weight="0.8"
+                          android:layout_height="match_parent"
+                          app:cardCornerRadius="@dimen/_5sdp"
+                          app:cardElevation="2dp"
+                          card_view:cardUseCompatPadding="true">
+
+                          <ImageView
+                              android:layout_width="match_parent"
+                              android:layout_height="match_parent"
+                              android:scaleType="fitXY"
+                              android:src="@drawable/slide1" />
+
+                      </android.support.v7.widget.CardView>-->
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/category_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Brand Stores"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/brandRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:padding="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:text="Recommendation for You"
+                android:textSize="@dimen/_13sdp" />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recommanded_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Perfumes"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/perfume_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Supermarket"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/supermarket_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Home &amp; Kitchen"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/homenkitchen_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Best Buy"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/bestbuy_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Sports &amp; Fitness"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/sportsnfitness_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Baby"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/baby_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Toys"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/toys_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Tools"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/tools_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Clothing"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/clothing_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="Footwear"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:padding="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:text="See All"
+                    android:textColor="@color/toolbarcolor"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/footwear_recylerVw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_2sdp">
+
+            </android.support.v7.widget.RecyclerView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawableLeft="@drawable/icon_replace"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="Free returns"
+                    android:textSize="@dimen/_12sdp" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:drawableLeft="@drawable/icon_cash"
+                    android:gravity="left|center"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:text="Cash On Delivery"
+                    android:textSize="@dimen/_12sdp" />
+
+            </LinearLayout>
+        </LinearLayout>
+        <!--   </HorizontalScrollView>
+       </LinearLayout>-->
+    </ScrollView>
+
+</LinearLayout>
