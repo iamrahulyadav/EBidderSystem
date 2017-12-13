@@ -38,7 +38,8 @@ public class OfferZoneFragment extends Fragment {
         return view;
     }
 
-    public void initViews(View view) {
+    public void initViews(View view)
+    {
 
         offerZoneRecyclerView = (RecyclerView) view.findViewById(R.id.offerzone_recyclerView);
         offerzoneArrayList = new ArrayList<OfferzoneClass>();

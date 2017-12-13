@@ -15,6 +15,7 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 
 import com.archi.ebiddersystem.R;
+import com.archi.ebiddersystem.activities.fashsion.FashionFragment;
 import com.archi.ebiddersystem.activities.offerzone.OfferZoneFragment;
 
 public class DashboardActivity extends AppCompatActivity
@@ -22,7 +23,7 @@ public class DashboardActivity extends AppCompatActivity
 
     private String TAG = "DashboardActivity";
 
-    RelativeLayout rlDeals, rlHome;
+    RelativeLayout rlDeals, rlHome,rlFashion;
     DrawerLayout drawer;
 
     @Override
@@ -35,6 +36,7 @@ public class DashboardActivity extends AppCompatActivity
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         rlDeals = (RelativeLayout) findViewById(R.id.rel_deals);
         rlHome = (RelativeLayout) findViewById(R.id.rel_home);
+        rlFashion=findViewById(R.id.rel_fashion);
 
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -125,6 +127,18 @@ public class DashboardActivity extends AppCompatActivity
                 ft.replace(R.id.frame_lMain, fragment).commit();
                 drawer.closeDrawers();
 
+            }
+        });
+
+        rlFashion.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view)
+            {
+                Fragment fragment = new FashionFragment();
+                FragmentManager fm = DashboardActivity.this.getSupportFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frame_lMain, fragment).commit();
+                drawer.closeDrawers();
             }
         });
     }

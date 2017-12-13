@@ -32,6 +32,10 @@
             android:name=".activities.loginmodule.DashboardActivity"
             android:label="@string/title_activity_dashboard"
             android:windowSoftInputMode="stateHidden" />
+        <activity
+            android:name=".activities.fashsion.FashionListActivity"
+            android:label="@string/title_activity_fashion_list"
+            android:theme="@style/AppTheme"></activity>
     </application>
 
 </manifest>
