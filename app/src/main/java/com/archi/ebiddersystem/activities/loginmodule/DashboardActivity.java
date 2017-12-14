@@ -129,7 +129,8 @@ public class DashboardActivity extends AppCompatActivity
             }
         });
 
-        rlFashion.setOnClickListener(new View.OnClickListener() {
+        rlFashion.setOnClickListener(new View.OnClickListener()
+        {
             @Override
             public void onClick(View view)
             {
