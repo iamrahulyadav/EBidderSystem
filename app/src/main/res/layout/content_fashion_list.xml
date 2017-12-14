@@ -20,7 +20,8 @@
 
             <ScrollView
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -48,36 +49,39 @@
                         <LinearLayout
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:gravity="right"
+                            android:gravity="right|center_vertical"
                             android:orientation="horizontal">
 
                             <ImageView
-                                android:layout_width="@dimen/_30sdp"
-                                android:layout_height="@dimen/_30sdp"
-                                android:background="@mipmap/ic_buynow" />
+                                android:id="@+id/img_gridviewlist"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:background="@mipmap/ic_menu_gridviewllist" />
 
                             <ImageView
-
-                                android:layout_width="@dimen/_30sdp"
-                                android:layout_height="@dimen/_30sdp"
+                                android:id="@+id/img_listviewlist"
+                                android:layout_width="@dimen/_25sdp"
+                                android:layout_height="@dimen/_25sdp"
                                 android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@mipmap/ic_buynow" />
+                                android:background="@mipmap/ic_menu_listviewlist" />
 
                             <ImageView
-                                android:layout_width="@dimen/_30sdp"
+                                android:id="@+id/img_sortinglist"
+                                android:layout_width="@dimen/_25sdp"
                                 android:layout_height="@dimen/_30sdp"
                                 android:layout_marginLeft="@dimen/_10sdp"
-                                android:background="@mipmap/ic_buynow" />
+                                android:background="@mipmap/ic_sortinglist" />
                         </LinearLayout>
                     </LinearLayout>
 
                     <android.support.v7.widget.RecyclerView
-                        android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_2sdp"
-                        android:layout_marginLeft="@dimen/_10sdp"
                         android:id="@+id/fashionlist_recyclerView"
                         android:layout_width="match_parent"
-                        android:layout_height="@dimen/_400sdp" />
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:scrollbars="vertical"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp" />
                 </LinearLayout>
             </ScrollView>
         </RelativeLayout>

@@ -1,17 +1,16 @@
 package com.archi.ebiddersystem.adapter;
 
 import android.content.Context;
-import android.content.Intent;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.RelativeLayout;
+import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.archi.ebiddersystem.R;
-import com.archi.ebiddersystem.activities.fashsion.FashionListActivity;
 import com.archi.ebiddersystem.model.FashionListClass;
 
 import java.util.ArrayList;
@@ -43,14 +42,30 @@ public class FashionListAdapter extends RecyclerView.Adapter<FashionListAdapter.
         holder.img_fashion.setImageResource(R.drawable.img_mentshirt);
 
 
-        // // TODO: 13/12/17  Click Any Item In Recyclerview ...
-        holder.rl_fashion_main.setOnClickListener(new View.OnClickListener() {
+        // // TODO: 13/12/17  Click Recycler Item Adapter ...
+        holder.llayout_fashion_main.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(context, FashionListActivity.class);
-                context.startActivity(intent);
+                Toast.makeText(context, "Hello, Click Any Product ", Toast.LENGTH_SHORT).show();
             }
         });
+
+
+        holder.llayout_like_product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "Like Unlike", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+
+        holder.llayout_addtocart_product.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(context, "AddToCart", Toast.LENGTH_SHORT).show();
+            }
+        });
+
     }
 
     @Override
@@ -61,13 +76,17 @@ public class FashionListAdapter extends RecyclerView.Adapter<FashionListAdapter.
     public class MyViewHolder extends RecyclerView.ViewHolder {
         public ImageView img_fashion;
         public TextView txt_fashion;
-        public RelativeLayout rl_fashion_main;
+        public LinearLayout llayout_fashion_main;
+        public ImageView llayout_like_product, llayout_addtocart_product;
+
 
         public MyViewHolder(View itemView) {
             super(itemView);
             img_fashion = (ImageView) itemView.findViewById(R.id.img_fashion);
             txt_fashion = (TextView) itemView.findViewById(R.id.txt_fashion);
-            rl_fashion_main = (RelativeLayout) itemView.findViewById(R.id.rl_fashion_main);
+            llayout_fashion_main = (LinearLayout) itemView.findViewById(R.id.llayout_fashion_main);
+            llayout_like_product = (ImageView) itemView.findViewById(R.id.llayout_like_product);
+            llayout_addtocart_product = (ImageView) itemView.findViewById(R.id.llayout_addtocart_product);
         }
     }
 }

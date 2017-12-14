@@ -18,12 +18,12 @@
         card_view:cardUseCompatPadding="true">
 
         <LinearLayout
+            android:id="@+id/llayout_fashion_main"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical">
 
             <RelativeLayout
-                android:id="@+id/rl_fashion_main"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_350sdp">
 
@@ -34,7 +34,6 @@
                     android:layout_marginBottom="@dimen/_10sdp"
                     android:layout_marginLeft="@dimen/_10sdp"
                     android:layout_marginRight="@dimen/_10sdp"
-
                     android:scaleType="fitXY"
                     android:src="@drawable/img_mentshirt" />
 
@@ -43,39 +42,21 @@
                     android:layout_height="match_parent"
                     android:gravity="right|bottom">
 
-                    <LinearLayout
-                        android:id="@+id/bdfd"
+                    <ImageView
+                        android:id="@+id/llayout_addtocart_product"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
+                        android:layout_below="@+id/llayout_like_product"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/active_dot"
-                        android:gravity="center">
+                        android:src="@mipmap/ic_nonactive_like" />
 
-                        <ImageView
-                            android:id="@+id/img_fashifdf"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp"
-                            android:src="@mipmap/ic_nonactive_like" />
-                    </LinearLayout>
-
-
-                    <LinearLayout
+                 <ImageView
+                        android:id="@+id/llayout_like_product"
                         android:layout_width="@dimen/_30sdp"
                         android:layout_height="@dimen/_30sdp"
-                        android:layout_below="@+id/bdfd"
-                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_10sdp"
-                        android:layout_marginTop="@dimen/_10sdp"
-                        android:background="@drawable/non_active_dot"
-                        android:gravity="center">
-
-                        <ImageView
-                            android:id="@+id/img_fashifddff"
-                            android:layout_width="@dimen/_20sdp"
-                            android:layout_height="@dimen/_20sdp"
-                            android:src="@mipmap/ic_addtocart" />
-                    </LinearLayout>
+                        android:src="@mipmap/ic_nonactive_like" />
 
                 </RelativeLayout>
 
