@@ -20,11 +20,11 @@ public class LoginActivity extends AppCompatActivity {
 
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
         init();
-
     }
 
     private void init()
@@ -34,9 +34,11 @@ public class LoginActivity extends AppCompatActivity {
         tvSinin=(TextView)findViewById(R.id.tv_Signin);
 
         tvForgotpwd.setOnClickListener(
-                new View.OnClickListener() {
+                new View.OnClickListener()
+                {
             @Override
-            public void onClick(View view) {
+            public void onClick(View view)
+            {
 
                 Intent intent=new Intent(LoginActivity.this,ForgotPasswordActivity.class);
                 startActivity(intent);
