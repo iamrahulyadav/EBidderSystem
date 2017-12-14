@@ -20,7 +20,8 @@ public class SpalshActivity extends AppCompatActivity {
     }
 
     private void init() {
-        new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable()
+        {
             @Override
             public void run() {
 
