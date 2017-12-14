@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/lightpinkbackground"
+    android:orientation="vertical"
+    tools:context=".activities.offerzone.OfferZoneItemActivity">
+
+    <include layout="@layout/menuitem_toolbar" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="1252 items" />
+
+        <ImageView
+            android:id="@+id/offeritem_ivsortBy"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/_10sdp"
+            android:layout_toStartOf="@+id/offeritem_ivsort"
+            android:src="@drawable/icon_sortby" />
+
+        <!--<View
+            android:id="@+id/offerzone_view"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:layout_toEndOf="@+id/offeritem_ivsortBy"
+            android:background="@color/graylight"
+            android:orientation="horizontal" />-->
+
+        <ImageView
+            android:id="@+id/offeritem_ivsort"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            android:layout_margin="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/offeritem_iv"
+            android:src="@drawable/menu_button1" />
+
+        <ImageView
+            android:id="@+id/offeritem_iv"
+            android:layout_width="@dimen/_15sdp"
+            android:layout_height="@dimen/_15sdp"
+            android:scaleType="fitXY"
+            android:layout_alignParentEnd="true"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/_5sdp"
+            android:src="@drawable/menu_button" />
+
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/offerItem_recycerView">
+    </android.support.v7.widget.RecyclerView>
+
+</LinearLayout>

@@ -23,15 +23,13 @@ import java.util.ArrayList;
 /**
  * A simple {@link Fragment} subclass.
  */
-public class FashionFragment extends Fragment
-{
+public class FashionFragment extends Fragment {
 
     LinearLayoutManager layoutManager;
     RecyclerView fashionRecyclerView;
     ArrayList<FashionClass> fashionArrayList;
 
-    public FashionFragment()
-    {
+    public FashionFragment() {
         // Required empty public constructor
     }
 
@@ -40,20 +38,19 @@ public class FashionFragment extends Fragment
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view= inflater.inflate(R.layout.fragment_fashion, container, false);
+        View view = inflater.inflate(R.layout.fragment_fashion, container, false);
         initViews(view);
         return view;
     }
 
-    private void initViews(View view)
-    {
+    private void initViews(View view) {
         fashionRecyclerView = (RecyclerView) view.findViewById(R.id.fashion_recyclerView);
         fashionArrayList = new ArrayList<FashionClass>();
         //layoutManager = new LinearLayoutManager(getActivity(), GridLayoutManager.VERTICAL, false);
-        RecyclerView.LayoutManager layoutManager=new GridLayoutManager(getActivity(),2);
+        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(getActivity(), 2);
         fashionRecyclerView.setLayoutManager(layoutManager);
 
-         fashionRecyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
+        fashionRecyclerView.addItemDecoration(new GridSpacingItemDecoration(2, dpToPx(10), true));
         fashionRecyclerView.setItemAnimator(new DefaultItemAnimator());
         FashionAdapter fashionAdapter = new FashionAdapter(getActivity(), fashionArrayList);
         fashionRecyclerView.setAdapter(fashionAdapter);
@@ -98,11 +95,7 @@ public class FashionFragment extends Fragment
         }
     }
 
-    /**
-     * Converting dp to pixel
-     */
-    private int dpToPx(int dp)
-    {
+    private int dpToPx(int dp) {
         Resources r = getResources();
         return Math.round(TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP, dp, r.getDisplayMetrics()));
     }
