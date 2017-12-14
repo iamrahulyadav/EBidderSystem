@@ -43,7 +43,6 @@
                     android:layout_height="match_parent"
                     android:gravity="right|bottom">
 
-
                     <LinearLayout
                         android:id="@+id/bdfd"
                         android:layout_width="@dimen/_30sdp"

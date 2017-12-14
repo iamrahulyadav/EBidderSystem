@@ -22,10 +22,11 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.MyVi
 
     Context context;
     ArrayList<RecommendClass> recommendArrayList;
+    boolean isClicked = false;
 
-    public RecommendAdapter(Context context, ArrayList<RecommendClass>recommendArrayList) {
+    public RecommendAdapter(Context context, ArrayList<RecommendClass> recommendArrayList) {
         this.context = context;
-        this.recommendArrayList=recommendArrayList;
+        this.recommendArrayList = recommendArrayList;
     }
 
     @Override
@@ -49,8 +50,8 @@ public class RecommendAdapter extends RecyclerView.Adapter<RecommendAdapter.MyVi
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
 
-        ImageView ivProcuctImage,ivShare,ivLike,ivCart;
-        TextView tvProductName,tvProductRegularPrice,tvCurrentPrice,tvPriceOff;
+        ImageView ivProcuctImage, ivShare, ivLike, ivCart;
+        TextView tvProductName, tvProductRegularPrice, tvCurrentPrice, tvPriceOff;
 
         public MyViewHolder(View itemView) {
             super(itemView);
