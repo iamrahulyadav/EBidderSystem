@@ -4,7 +4,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context="com.archi.ebiddersystem.activities.fashsion.FashionListActivity">
-
     <include layout="@layout/content_fashion_list" />
 
     <android.support.design.widget.FloatingActionButton
@@ -12,7 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="@dimen/fab_margin"
-        android:src="@mipmap/ic_buynow" />
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@mipmap/ic_filter" />
 
 </android.support.design.widget.CoordinatorLayout>

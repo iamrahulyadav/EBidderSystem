@@ -10,10 +10,12 @@
         android:id="@+id/setting_Account"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:cardCornerRadius="@dimen/_8sdp"
-        app:cardElevation="@dimen/_2sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_3sdp"
         app:cardPreventCornerOverlap="false"
         card_view:cardUseCompatPadding="true">
+
 
         <RelativeLayout
             android:id="@+id/rl_fashion_main"
