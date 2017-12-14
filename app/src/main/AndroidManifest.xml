@@ -21,7 +21,8 @@
         <activity android:name=".activities.loginmodule.RegistrationActivity" />
         <activity
             android:name=".activities.loginmodule.LoginActivity"
-            android:windowSoftInputMode="stateHidden|adjustResize" />
+            android:windowSoftInputMode="stateHidden|adjustResize"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".activities.loginmodule.ForgotPasswordActivity"
             android:windowSoftInputMode="stateHidden" />
